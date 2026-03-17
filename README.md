@@ -7,11 +7,6 @@ It allows users to perform basic arithmetic operations like addition, subtractio
 
 ## 🚀 Live Demo
 
-👉 Add your deployed link here (after deployment)
-Example: https://your-app-name.onrender.com
-
----
-
 ## 📌 Features
 
 * Add two numbers
