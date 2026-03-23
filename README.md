@@ -6,6 +6,7 @@ It allows users to perform basic arithmetic operations like addition, subtractio
 ---
 
 ## 🚀 Live Demo
+https://calculator-app-nwidkxayjjdzsv57mwaj4j.streamlit.app/
 
 ## 📌 Features
 
