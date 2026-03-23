@@ -1,29 +1,26 @@
-def calculator():
-    print("Simple Calculator")
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+import streamlit as st
 
-    choice = input("Enter choice (1/2/3/4): ")
+st.title("Simple Calculator")
 
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+# User inputs
+num1 = st.number_input("Enter first number", value=0.0)
+num2 = st.number_input("Enter second number", value=0.0)
 
-    if choice == '1':
-        print(f"{num1} + {num2} = {num1 + num2}")
-    elif choice == '2':
-        print(f"{num1} - {num2} = {num1 - num2}")
-    elif choice == '3':
-        print(f"{num1} * {num2} = {num1 * num2}")
-    elif choice == '4':
+operation = st.selectbox(
+    "Select operation",
+    ("Add", "Subtract", "Multiply", "Divide")
+)
+
+# Perform calculation when button is clicked
+if st.button("Calculate"):
+    if operation == "Add":
+        st.success(f"{num1} + {num2} = {num1 + num2}")
+    elif operation == "Subtract":
+        st.success(f"{num1} - {num2} = {num1 - num2}")
+    elif operation == "Multiply":
+        st.success(f"{num1} * {num2} = {num1 * num2}")
+    elif operation == "Divide":
         if num2 != 0:
-            print(f"{num1} / {num2} = {num1 / num2}")
+            st.success(f"{num1} / {num2} = {num1 / num2}")
         else:
-            print("Error! Division by zero.")
-    else:
-        print("Invalid input")
-
-# Run the calculator
-calculator()
+            st.error("Error! Division by zero.")
