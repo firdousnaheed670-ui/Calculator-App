@@ -1,3 +1,7 @@
+import streamlit as st
+
+st.title("Simple Calculator")
+
 def calculator():
     print("Simple Calculator")
     print("Select operation:")
